@@ -3,7 +3,7 @@
 #######################################
 ## atom smasher's haveibeenpwned-check-passwd.bash
 ## https://github.com/atom-smasher/haveibeenpwned-check-passwd
-## v1.02       26 apr 2026
+## v1.03       26 apr 2026
 ## Distributed under the GNU General Public License
 ## http://www.gnu.org/copyleft/gpl.html
 
@@ -19,7 +19,7 @@ suffix=${sha:5}
 
 ## if the `curl` fails, exit with an error
 trap 'echo ERROR ; exit 1' ERR
-match=$( curl -fsS "https://api.pwnedpasswords.com/range/$prefix" )
+match=$( curl -fsS "https://api.pwnedpasswords.com/range/${prefix}" )
 trap - ERR
 
 ## testing
