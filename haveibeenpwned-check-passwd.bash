@@ -1,9 +1,9 @@
-#!/usr/bin/bash --noprofile
+#!/bin/bash --noprofile
 
 #######################################
 ## atom smasher's haveibeenpwned-check-passwd.bash
 ## https://github.com/atom-smasher/haveibeenpwned-check-passwd
-## v1.0       26 apr 2026
+## v1.01       26 apr 2026
 ## Distributed under the GNU General Public License
 ## http://www.gnu.org/copyleft/gpl.html
 
