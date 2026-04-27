@@ -3,7 +3,7 @@
 #######################################
 ## atom smasher's haveibeenpwned-check-passwd.bash
 ## https://github.com/atom-smasher/haveibeenpwned-check-passwd
-## v1.05 - 26 apr 2026
+## v1.06 - 28 apr 2026
 ## Distributed under the GNU General Public License
 ## http://www.gnu.org/copyleft/gpl.html
 
@@ -23,7 +23,9 @@ pw="${*}"
     read -p 'Password: ' pw
     ## turn on echo
     stty echo
-}
+    printf '\r'
+    echo '         (password read from input)'
+} >&2
 
 sha=$(printf '%s' "${pw}" | sha1sum | awk '{print toupper($1)}')
 pw=${sha1}
